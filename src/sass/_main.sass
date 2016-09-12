@@ -1,0 +1,320 @@
+
+.intro
+	height: inherit
+	&__inner
+		+inner
+		height: 450px
+		background: $white
+	&__counter
+		font-size: 18px
+		color: $darkBlue
+		margin-top: 25px
+		letter-spacing: 1.5px
+		font-weight: 400
+		display: inline-block
+	&__span
+		color: #c4c4c4
+		margin-left: 5px
+	&__arrow-left
+		+s(left-arr)
+		margin-right: 5px
+		position: relative
+		top: 1px
+		display: inline-block
+		cursor: pointer
+	&__arrow-right
+		@extend .intro__arrow-left
+		+s(right-arr)
+		margin-right: 0
+		margin-left: 5px
+
+.map
+	background-position: right bottom
+	background-repeat: no-repeat
+	padding: 62px 0 0 47px
+	height: 450px
+	&__content
+		width: 440px
+	&__title
+		font-size: 36px
+		font-weight: 700
+		text-transform: uppercase
+		color: $darkBlue
+	&__text
+		color: $lightGray
+		font-size: 16px
+		font-weight: 400
+		line-height: 23px
+		margin-top: 25px
+	&__btn
+		width: 300px
+		margin-top: 44px
+
+
+.btn
+	height: 100px
+	line-height: 100px
+	text-align: center
+	color: $white
+	font-size: 18px
+	font-weight: 600
+	text-decoration: none
+	text-transform: uppercase
+	background: $lightBlue
+	display: block
+	+openSans
+	transition: 1s
+	&:hover
+		background: $darkBlue
+
+
+//next section
+.blocks-wrap
+	+inner
+	margin-top: 50px
+	+flex(space-between)
+	&_m100
+		@extend .blocks-wrap
+		margin-top: 100px
+.support-wrap
+	width: 350px
+	height: 300px
+	background: $white
+.support
+	padding: 43px 50px 0 50px
+	position: relative
+	&:before
+		display: block
+		content: ''
+		+s(long-blue-line)
+		position: absolute
+		top: 50px
+		right: 60px
+	&__ammount
+		height: 50px
+		line-height: 50px
+		border: 1px solid #dee0e3
+		border-left: 3px solid $lightBlue
+		color: #b7babb
+		font-size: 13px
+		font-style: italic
+		width: 100%
+		margin-top: 22px
+		padding: 0 20px 0 20px
+		-moz-appearance: textfield //remove default arrows
+		&::-webkit-inner-spin-button,::-webkit-outer-spin-button
+			-webkit-appearance: none
+
+
+	&__btn
+		margin-top: 35px
+		width: 100%
+
+.block-title
+	font-size: 18px
+	font-weight: 600
+	text-transform: uppercase
+	color: $blockTitleColor
+
+.arrest-wrap
+	@extend .support-wrap
+	width: 600px
+.arrest
+	@extend .support
+	background: url("../img/handcuffs.png") no-repeat 405px 35px
+	padding-bottom: 47px
+
+	&:before
+		@extend .support:before
+		top: 52px
+		right: 226px
+
+
+
+
+	&__text
+		@extend .map__text
+		line-height: 20px
+	&__btn
+		position: relative
+		z-index: 2
+
+//team section
+.team
+	+inner
+	height: 300px
+	background: url("../img/team-bg.png") no-repeat
+	margin-top: 50px
+	padding: 50px 0 0 $teamBlockPadding
+	position: relative
+	&__stripe
+		font-size: 13px
+		font-weight: 400
+		color: $darkBlue
+		+s(white-line)
+		display: block
+		padding-left: $teamBlockPadding
+		position: relative
+		left: -#{$teamBlockPadding}
+	&__title
+		color: $white
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		margin-top: 50px
+		line-height: 35px
+	&__btn
+		width: 200px
+		position: absolute
+		bottom: -50px
+		left: 0
+
+//news
+.news
+	height: 350px
+	width: 300px
+	background: $darkBlue
+	padding-top: 45px
+	&__title
+		padding-left: 50px
+		font-size: 18px
+		font-weight: 600
+		text-transform: uppercase
+		color: $white
+		position: relative
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			left: 0
+			top: 7px
+			+s(short-blue-line)
+	&__dd
+		color: $lightBlue
+		font-size: 120px
+		font-weight: 600
+		text-align: center
+		line-height: 125px
+		text-transform: uppercase
+
+	&__mmyy
+		@extend .news__dd
+		line-height: 20px
+		font-size: 15px
+	&__btn
+		margin-top: 35px
+
+//news-slider
+.news-slider
+	height: 350px
+	background: $white
+	width: 700px //
+.novelty
+	&__item
+		height: inherit
+	&__article
+		width: 400px
+		height: inherit
+		padding: 45px 50px 0 50px
+		float: left
+	&__location
+		color: $darkBlue
+		font-size: 13px
+		font-weight: 400
+	&__title
+		margin-top: 20px
+		line-height: 22px
+	&__text
+		color: $lightGray
+		font-size: 13px
+		font-weight: 400
+		margin-top: 24px
+		line-height: 20px
+	&__more
+		color: $darkBlue
+		font-size: 14px
+		font-weight: 700
+		line-height: 22px
+		display: inline-block
+		margin-top: 33px
+
+	&__img
+		width: 300px
+		height: 300px
+		background-size: cover
+		background-position: center center
+		float: left
+
+
+
+// styles for slider buttons (redefining _slick.sass) for .news-slider and .investigation-slider
+.slick-prev:before, .slick-next:before
+	background-color: transparent
+
+.slick-prev,
+.slick-next
+	position: absolute
+	top: auto
+	bottom: 0
+	left: 400px
+	margin-top: -10px
+	+hide-text
+	background: $lightBlue
+	z-index: 1
+	width: 100px
+	height: 100px
+	transition: 1s
+	&:hover
+		background: $darkBlue
+	&:focus
+		outline: none
+	&.slick-disabled
+		opacity: 0.2
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+s(slider-arrow-left)
+.slick-next
+	left: auto
+	right: 100px
+	background: $darkBlue
+	&:hover
+		background: $lightBlue
+	&:before
+		content: ""
+		display: inline-block
+		+s(slider-arrow-right)
+
+
+.investigations-slider	.slick-prev
+	left: 100px
+.investigations-slider	.slick-next
+	right: 400px
+
+
+//investigation-slider
+.investigations-slider
+	@extend .news-slider
+
+
+.investigations
+	@extend .news
+	background: $lightBlue
+	&__title
+		@extend .news__title
+		&:before
+			+s(long-darkblue-line)
+			left: -20px
+	&__dd
+		@extend .news__dd
+		color: $darkBlue
+	&__mmyy
+		@extend .news__mmyy
+		@extend .investigations__dd
+	&__btn
+		@extend .news__btn
+		background: $darkBlue
+		&:hover
+			background: $lightBlue
+

@@ -1,0 +1,33 @@
+header.header
+   a.logo-wrap(href="#" title="")
+      .logo(role="img")
+      .logo__text-wrap
+         h1.logo__text Антикорупційний
+            br
+            span штаб
+
+   //navigation
+   nav.nav-wrap
+      - var nav = ['Головна', 'Про нас', 'Контакти']
+      - var nav2 = ['Новини', 'Розслідування', 'Карта']
+      - var nav3 = ['Підтримати','Приєднатись', 'Здати корупціонера']
+      ul.nav
+         each item in nav
+            li.nav__item: a.nav__link(href="#", title=item)=item
+      ul.nav.nav_2
+         each item in nav2
+            li.nav__item: a.nav__link(href="#", title=item)=item
+      ul.nav.nav_3
+         each item in nav3
+            li.nav__item: a.nav__link(href="#", title=item)=item
+   //end navigation
+
+   .actions
+      .lang__wrap
+         span.js-text-holder ua
+            span.lang__arrow
+         select.lang
+            option.lang__option(selected) ua
+            option.lang__option rus
+            option.lang__option eng
+      .search(role="button")

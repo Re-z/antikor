@@ -1,0 +1,134 @@
+extends _layout
+
+block title
+	title Antikor
+
+block content
+	main
+		//start section
+		section.intro__wrap
+			.intro__inner
+				.intro
+					.map(style="background-image: url('img/intro-bg.png')")
+						.map__content
+							h2.map__title КАРТА РЕМОНТІВ
+							p.map__text Слідкуйте за виконанням обіцянок моновладців безпосередньо на мапі України та відстежуйте куди йдуть ваші гроші
+							span.intro__counter  #[span.intro__arrow-left] 01#[span.intro__span /05] #[span.intro__arrow-right]
+							a.btn.map__btn(href="#") Перейти до карти
+					//test slide
+					.map(style="background-image: url('img/intro-bg.png')")
+						.map__content
+							h2.map__title КАРТА РЕМОНТІВ
+							p.map__text Слідкуйте за виконанням обіцянок моновладців безпосередньо на мапі України та відстежуйте куди йдуть ваші гроші
+							span.intro__counter  #[span.intro__arrow-left] 02#[span.intro__span /05] #[span.intro__arrow-right]
+							a.btn.map__btn(href="#") Перейти до карти
+					//end test slide
+					//test slide
+					.map(style="background-image: url('img/intro-bg.png')")
+						.map__content
+							h2.map__title КАРТА РЕМОНТІВ
+							p.map__text Слідкуйте за виконанням обіцянок моновладців безпосередньо на мапі України та відстежуйте куди йдуть ваші гроші
+							span.intro__counter  #[span.intro__arrow-left] 03#[span.intro__span /05] #[span.intro__arrow-right]
+							a.btn.map__btn(href="#") Перейти до карти
+					//end test slide
+					//test slide
+					.map(style="background-image: url('img/intro-bg.png')")
+						.map__content
+							h2.map__title КАРТА РЕМОНТІВ
+							p.map__text Слідкуйте за виконанням обіцянок моновладців безпосередньо на мапі України та відстежуйте куди йдуть ваші гроші
+							span.intro__counter  #[span.intro__arrow-left] 04#[span.intro__span /05] #[span.intro__arrow-right]
+							a.btn.map__btn(href="#") Перейти до карти
+					//end test slide
+					//test slide
+					.map(style="background-image: url('img/intro-bg.png')")
+						.map__content
+							h2.map__title КАРТА РЕМОНТІВ
+							p.map__text Слідкуйте за виконанням обіцянок моновладців безпосередньо на мапі України та відстежуйте куди йдуть ваші гроші
+							span.intro__counter  #[span.intro__arrow-left] 05#[span.intro__span /05] #[span.intro__arrow-right]
+							a.btn.map__btn(href="#") Перейти до карти
+					//end test slide
+
+		//start section
+		section.blocks-wrap
+			form.support-wrap(action="" method="post")
+				.support
+					h3.block-title ПІДТРИМАТИ АНТИКОРУПЦІЙНИй штаб
+					input.support__ammount(type="number" placeholder="Сума в гривнях")
+				input.support__btn.btn(type="submit" value="Підтримати")
+			.arrest-wrap
+				.arrest
+					h3.block-title ЗДАТИ КОРУПЦІОНеРА
+					p.arrest__text Якщо ви стали свідком або випадковим учасником корупційних дій, будь ласка, заповніть анкету та надішліть нам. Ми обов’ язково розглянемо справу і передамо її до суду.
+				a.arrest__btn.btn(href="#" title="Завести справу") Завести справу
+
+		//start section
+		section.team
+			span.team__stripe Команда
+			h3.team__title Знайомтесь <br> з нашою командою
+			a.team__btn.btn(href="#" title="Про нас") Про нас
+
+		//start section
+		section.blocks-wrap_m100
+			.news
+				h4.news__title Останні новини
+				p.news__dd 25
+				p.news__mmyy березень, 2016
+				a.news__btn.btn(href="#" title="Більше новин") Більше новин
+
+			.news-slider
+				.novelty
+					article.novelty__article
+						p.novelty__location м. Київ, Київська область
+						h5.novelty__title.block-title Активісти оприлюднили перелік будівель, які мають відремонтувати за столичні кошти в 2015 році
+						p.novelty__text Антикорупційний штаб Києва оприлюднив перелік будівель м. Києва, які мають відремонтувати за столичні кошти в 2015 році.
+						a.novelty__more(href="#" title="Детальніше") Детальніше
+					div.novelty__img(role="img" style="background-image: url('img/news-slider-img.png')")
+				//test slide
+				.novelty
+					article.novelty__article
+						p.novelty__location м. Київ, Київська область
+						h5.novelty__title.block-title Активісти оприлюднили перелік будівель, які мають відремонтувати за столичні кошти в 2015 році
+						p.novelty__text Антикорупційний штаб Києва оприлюднив перелік будівель м. Києва, які мають відремонтувати за столичні кошти в 2015 році.
+						a.novelty__more(href="#" title="Детальніше") Детальніше
+					div.novelty__img(role="img" style="background-image: url('img/news-slider-img.png')")
+				//end test slide
+
+		//start section
+		section.blocks-wrap
+			.investigations-slider
+				.novelty
+					div.novelty__img(role="img" style="background-image: url('img/news-slider-img.png')")
+					article.novelty__article
+						p.novelty__location м. Київ, Київська область
+						h5.novelty__title.block-title Антикорупційний штаб виявив розкрадання в КП «Київпастранс»
+						p.novelty__text Антикорупційний штаб Києва продовжує слідкувати за київськими державними закупівлями, адже так чи інакше комунальні підприємства і столична влада .
+						a.novelty__more(href="#" title="Детальніше") Детальніше
+				//test slide
+				.novelty
+					div.novelty__img(role="img" style="background-image: url('img/news-slider-img.png')")
+					article.novelty__article
+						p.novelty__location м. Київ, Київська область
+						h5.novelty__title.block-title Антикорупційний штаб виявив розкрадання в КП «Київпастранс»
+						p.novelty__text Антикорупційний штаб Києва продовжує слідкувати за київськими державними закупівлями, адже так чи інакше комунальні підприємства і столична влада .
+						a.novelty__more(href="#" title="Детальніше") Детальніше
+				//end test slide
+
+			.investigations
+				h4.investigations__title Розслідування
+				p.investigations__dd 09
+				p.investigations__mmyy березень, 2016
+				a.investigations__btn.btn(href="#" title="Більше розслідувань") Більше розслідувань
+
+
+
+
+
+
+
+
+
+
+
+
+
+

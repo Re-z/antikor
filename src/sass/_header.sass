@@ -1,0 +1,117 @@
+.header
+	background: $darkBlue
+	border-bottom: 7px solid $lightBlue
+	+inner
+	height: 150px //143
+	padding-left: 50px
+	+flex(space-between, center)
+
+.logo-wrap
+	width: 210px
+	+flex(flex-start, center)
+	flex-wrap: wrap
+	position: relative
+	top: -5px
+	text-decoration: none
+
+.logo
+	+s(logo)
+	margin-right: 6px
+
+	&__text
+		color: $white
+		font-size: 15px
+		text-transform: uppercase
+		line-height: 19px
+		& span
+			font-size: 25px
+
+//navigation
+.nav-wrap
+	position: relative
+	left: 53px
+	padding-left: 25px
+
+.nav
+	display: inline-block
+	margin-right: 45px
+	width: 80px
+	&_2
+		margin-right: 50px
+		width: 100px
+	&_3
+		margin-right: 0
+		width: 160px
+
+	&__item
+		list-style: none
+	&__link
+		color: $white
+		font-size: 15px
+		font-weight: 400
+		line-height: 25px
+		text-decoration: none
+		position: relative
+		&:hover
+			font-weight: bold
+			//adding a flag on hover
+			&:before
+				display: block
+				content: ''
+				+s(menu-flag)
+				position: absolute
+				left: -25px
+				top: 50%
+				margin-top: calc(-9px / 2)
+
+.actions
+	align-self: flex-start
+
+.lang
+	width: 100%
+	height: 100%
+	position: absolute
+	opacity: 0
+	left: 0
+	top: 0
+	cursor: pointer
+	background: inherit
+	color: inherit
+	font-size: inherit
+	&__wrap
+		width: 50px
+		height: 50px
+		background: $darkBlue
+		position: relative
+		text-transform: uppercase
+		line-height: 50px
+		color: $white
+		text-align: center
+		font-size: 13px
+		cursor: pointer
+	&__arrow
+		+s(arrow-down)
+		position: relative
+		top: -2px
+		display: inline-block
+		margin-left: 5px
+
+	&__option
+		text-transform: uppercase
+		text-align: center
+
+.search
+	width: 50px
+	height: 50px
+	background: $lightBlue
+	position: relative
+	cursor: pointer
+	&:after
+		display: block
+		content: ''
+		+s(search)
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: calc(-17px / 2)
+		margin-left: calc(-17px / 2)

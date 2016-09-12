@@ -1,0 +1,128 @@
+.footer
+	background: $darkBlue
+	margin-top: 100px
+	position: relative
+	min-width: $minWidth
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		+arr(230,450, #1b488b, l)
+	&__inner
+		+inner
+		height: 451px
+		+flex(space-between)
+		padding-top: 90px
+		padding-bottom: 100px
+		position: relative
+		z-index: 2
+	&__title
+		font-size: 24px
+		font-weight: 700
+		text-transform: uppercase
+		color: $white
+		position: relative
+	&__contacts
+		width: 325px
+		border-right: 1px solid $lightBlue
+		&-item
+			margin-top: 22px
+			padding-left: 75px
+			position: relative
+			//icons
+			&.email:before
+				display: block
+				content: ''
+				+s(mail)
+				position: absolute
+				left: 0
+				top: 5px
+			&.phone:before
+				@extend .email:before
+				+s(phone)
+			&.adress:before
+				@extend .email:before
+				+s(adress)
+		&-key
+			color: $white
+			font-size: 16px
+			line-height: 23px
+			font-weight: 700
+		&-value
+			@extend .footer__contacts-key
+			font-weight: 400
+			text-decoration: none
+	&__socials
+		@extend .footer__contacts
+		padding-left: 50px
+		&-item
+			@extend .footer__contacts-item
+			margin-top: 48px
+			display: inline-block
+			padding-bottom: 5px
+			@extend .footer__contacts-key
+			text-decoration: none
+
+			&:first-of-type
+				margin-top: 22px
+			&.fb:before
+				display: block
+				content: ''
+				+s(fb)
+				position: absolute
+				left: 5px
+				top: 0
+			&.tw:before
+				@extend .fb:before
+				+s(tw)
+				left: -3px
+			&.vk:before
+				@extend .fb:before
+				+s(vk)
+				top: 5px
+				left: 0
+
+
+	&__subscribe
+		width: 350px
+		padding-left: 50px
+		& .footer__title:after
+			display: block
+			content: ''
+			+s(short-blue-line2)
+			position: absolute
+			right: 80px
+			top: 13px
+		&-wrap
+			+clr
+
+		&-input
+			@extend .support__ammount
+			border: none
+			&.small
+				width: 250px
+				float: left
+		&-submit
+			display: inline-block
+			border: none
+			width: inherit
+			height: inherit
+			transition: 1s
+			background: url("../img/slider-arrow-right.png") center center no-repeat, $lightBlue
+			&:hover
+				background: url("../img/slider-arrow-right.png") center center no-repeat, $darkBlue
+			&-wrap
+				width: 50px
+				height: 50px
+				margin-top: 22px
+				float: left
+				position: relative
+
+
+.copyrights
+	font-size: 16px
+	font-weight: 400
+	color: $white
+	margin-top: 30px
